@@ -14,10 +14,10 @@
     <Description>Headless Browser .NET API</Description>
     <PackageId>Codeuctivity.PuppeteerSharp</PackageId>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageVersion>9.0.1</PackageVersion>
-    <ReleaseVersion>9.0.1</ReleaseVersion>
-    <AssemblyVersion>9.0.0.1</AssemblyVersion>
-    <FileVersion>9.0.0.1</FileVersion>
+    <PackageVersion>9.0.2</PackageVersion>
+    <ReleaseVersion>9.0.2</ReleaseVersion>
+    <AssemblyVersion>9.0.0.2</AssemblyVersion>
+    <FileVersion>9.0.0.2</FileVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
     <CodeAnalysisRuleSet>../PuppeteerSharp.ruleset</CodeAnalysisRuleSet>
@@ -25,13 +25,10 @@
   </PropertyGroup>
   <Import Project="../Common/SignAssembly.props" />
   <PropertyGroup>
-    <IncludeSymbols>true</IncludeSymbols>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
-    <DebugType>embedded</DebugType>
-    <DebugSymbols>true</DebugSymbols>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <ContinuousIntegrationBuild Condition="'$(APPVEYOR)' == 'true'">true</ContinuousIntegrationBuild>
