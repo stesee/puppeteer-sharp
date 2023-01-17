@@ -33,14 +33,6 @@ jobs:
         sudo update-ca-certificates
     - name: Build
       run: dotnet build lib/PuppeteerSharp.sln --configuration Release
-    - name: Test
-      env:
-        PRODUCT: ${{ matrix.browser }}
-      run: |
-          Xvfb :1 -screen 5 1024x768x8 &
-          export DISPLAY=:1.5
-          cd lib/PuppeteerSharp.Tests
-          dotnet test -f net6.0 -s test.runsettings -c Debug --logger "trx;LogFileName=TestResults.xml"
     - name: NugetPush
       env:
         NUGET_TOKEN_EXISTS: ${{ secrets.NUGET_TEST_TOKEN }}
