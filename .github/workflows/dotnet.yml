@@ -39,7 +39,7 @@ jobs:
         sudo openssl x509 -inform der -in lib/PuppeteerSharp.TestServer/testCert.cer -out /usr/local/share/ca-certificates/testCert.crt -outform pem
         sudo update-ca-certificates
     - name: Build
-      run: dotnet build lib/PuppeteerSharp.sln
+      run: dotnet build lib/PuppeteerSharp.sln --configuration Release
     - name: Test
       env:
         PRODUCT: ${{ matrix.browser }}
@@ -48,3 +48,19 @@ jobs:
           export DISPLAY=:1.5
           cd lib/PuppeteerSharp.Tests
           dotnet test -f net6.0 -s test.runsettings -c Debug --logger "trx;LogFileName=TestResults.xml"
+    - name: NugetPush
+      env:
+        NUGET_TOKEN_EXISTS: ${{ secrets.NUGET_TEST_TOKEN }}
+      if: env.NUGET_TOKEN_EXISTS != ''
+      run: |
+        ls ./lib/PuppeteerSharp/bin/Release
+        dotnet nuget push ./lib/PuppeteerSharp/bin/Release/*.nupkg --skip-duplicate --api-key ${{secrets.NUGET_TEST_TOKEN}} --source https://apiint.nugettest.org/v3/index.json
+    - uses: "marvinpinto/action-automatic-releases@latest"
+      with:
+        repo_token: "${{ secrets.GITHUB_TOKEN }}"
+        automatic_release_tag: "latest-prerelease"
+        prerelease: true
+        title: "Prerelease Build"
+        files: |
+          ./lib/PuppeteerSharp/bin/Release/*.nupkg
+          ./lib/PuppeteerSharp/bin/Release/*.snupkg
