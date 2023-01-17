@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackOnBuild>true</PackOnBuild>
-    <Authors>Darío Kondratiuk</Authors>
+    <Authors>Darío Kondratiuk, Stefan Seeland</Authors>
     <Owners>Darío Kondratiuk</Owners>
     <PackageProjectUrl>https://github.com/stesee/puppeteer-sharp</PackageProjectUrl>
     <RepositoryUrl>https://github.com/stesee/puppeteer-sharp</RepositoryUrl>
