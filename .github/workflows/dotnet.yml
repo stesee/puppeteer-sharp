@@ -2,14 +2,7 @@ name: build
 
 on:
   push:
-    branches:
-      - master
-      - release-*
   pull_request:
-    branches: [ master ]
-    paths:
-    - '**.cs'
-    - '**.csproj'
 
 env:
   DOTNET_VERSION: '6.0.x' # The .NET SDK version to use
