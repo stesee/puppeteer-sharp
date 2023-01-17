@@ -5,13 +5,13 @@
     <PackOnBuild>true</PackOnBuild>
     <Authors>Darío Kondratiuk</Authors>
     <Owners>Darío Kondratiuk</Owners>
-    <PackageProjectUrl>https://github.com/hardkoded/puppeteer-sharp</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/stesee/puppeteer-sharp</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Summary>Headless Browser .NET API</Summary>
     <PackageTags>headless,chrome,puppeteer</PackageTags>
     <Title>PuppeteerSharp</Title>
     <Description>Headless Browser .NET API</Description>
-    <PackageId>PuppeteerSharp</PackageId>
+    <PackageId>Codeuctivity.PuppeteerSharp</PackageId>
     <PackageReleaseNotes></PackageReleaseNotes>
     <PackageVersion>9.0.0</PackageVersion>
     <ReleaseVersion>9.0.0</ReleaseVersion>
@@ -20,12 +20,13 @@
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
     <CodeAnalysisRuleSet>../PuppeteerSharp.ruleset</CodeAnalysisRuleSet>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
   </PropertyGroup>
   <Import Project="../Common/SignAssembly.props" />
   <PropertyGroup>
     <DebugType>embedded</DebugType>
     <DebugSymbols>true</DebugSymbols>
-    <PackageProjectUrl>https://github.com/hardkoded/puppeteer-sharp</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/stesee/puppeteer-sharp</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
