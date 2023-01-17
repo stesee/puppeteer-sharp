@@ -14,10 +14,10 @@
     <Description>Headless Browser .NET API</Description>
     <PackageId>Codeuctivity.PuppeteerSharp</PackageId>
     <PackageReleaseNotes></PackageReleaseNotes>
-    <PackageVersion>9.0.2</PackageVersion>
-    <ReleaseVersion>9.0.2</ReleaseVersion>
-    <AssemblyVersion>9.0.0.2</AssemblyVersion>
-    <FileVersion>9.0.0.2</FileVersion>
+    <PackageVersion>9.0.3</PackageVersion>
+    <ReleaseVersion>9.0.3</ReleaseVersion>
+    <AssemblyVersion>9.0.0.3</AssemblyVersion>
+    <FileVersion>9.0.0.3</FileVersion>
     <SynchReleaseVersion>false</SynchReleaseVersion>
     <StyleCopTreatErrorsAsWarnings>false</StyleCopTreatErrorsAsWarnings>
     <CodeAnalysisRuleSet>../PuppeteerSharp.ruleset</CodeAnalysisRuleSet>
@@ -29,6 +29,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <AllowedOutputExtensionsInPackageBuildOutputFolder>$(AllowedOutputExtensionsInPackageBuildOutputFolder);.pdb</AllowedOutputExtensionsInPackageBuildOutputFolder>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <ContinuousIntegrationBuild Condition="'$(GITHUB_ACTIONS)' == 'true'">true</ContinuousIntegrationBuild>
     <ContinuousIntegrationBuild Condition="'$(APPVEYOR)' == 'true'">true</ContinuousIntegrationBuild>
